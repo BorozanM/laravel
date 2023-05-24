@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Laptop extends Model
 {
-    use HasFactory;protected $fillable = [
+    use HasFactory;
+    protected $fillable = [
         'naziv',
         'ekran',
         'baterija',

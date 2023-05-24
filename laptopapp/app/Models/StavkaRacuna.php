@@ -7,12 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class StavkaRacuna extends Model
 {
-    use HasFactory;protected $fillable = [
+    use HasFactory;
+    protected $fillable = [
         'laptop',
         'kolicina',
-        'racun',
+        'racun'
     ];
-    public function racun()
+    public function racuna()
     {
         return $this->belongsTo(Racun::class);
     }
