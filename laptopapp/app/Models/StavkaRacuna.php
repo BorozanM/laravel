@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class StavkaRacuna extends Model
 {
     use HasFactory;protected $fillable = [
-        'telefon',
+        'laptop',
         'kolicina',
         'racun',
     ];

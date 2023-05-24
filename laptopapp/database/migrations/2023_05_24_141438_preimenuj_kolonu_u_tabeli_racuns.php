@@ -10,13 +10,10 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::create('racuns', function (Blueprint $table) {
-            $table->id();
-            $table->date('datum');
-            $table->string('adresa');
-            $table->timestamps();
-        });
+    {Schema::table('racuns', function (Blueprint $table) {
+        $table->renameColumn('adresa','adresaLokala');
+   });
+        //
     }
 
     /**
@@ -24,6 +21,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('racuns');
+        Schema::table('racuns', function (Blueprint $table) {
+        $table->renameColumn('adresaLokala','adresa');
+   });
+        //
     }
 };
