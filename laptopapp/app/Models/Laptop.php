@@ -15,4 +15,8 @@ class Laptop extends Model
         'boja',
         'cena'
     ];
+    public function stavka()
+    {
+        return $this->belongsTo(StavkaRacuna::class);
+    }
 }
